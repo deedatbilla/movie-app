@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-movieapp-dev-180146-authRole",
+      "UnauthRoleArn": "arn:aws:iam::240135226120:role/amplify-movieapp-dev-180146-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::240135226120:role/amplify-movieapp-dev-180146-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-movieapp-dev-180146-deployment",
+      "UnauthRoleName": "amplify-movieapp-dev-180146-unauthRole",
+      "StackName": "amplify-movieapp-dev-180146",
+      "StackId": "arn:aws:cloudformation:eu-west-2:240135226120:stack/amplify-movieapp-dev-180146/519bfd90-3457-11ed-8900-0265dd96e7b2",
+      "AmplifyAppId": "dnxyyoa6ft0a6"
+    },
+    "categories": {
+      "function": {
+        "movieService": {
+          "databaseUrl": "postgresql://postgres:Portable12@moviesdb.cireainyhfl2.eu-west-2.rds.amazonaws.com:5432/moviesdb?schema=public"
+        }
+      }
+    }
+  }
+}

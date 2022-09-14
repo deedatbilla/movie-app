@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/all-movies": {
+      "name": "/all-movies",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/all-directors": {
+      "name": "/all-directors",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/get-movie": {
+      "name": "/get-movie",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/get-director": {
+      "name": "/get-director",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/add-movie": {
+      "name": "/add-movie",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/add-director": {
+      "name": "/add-director",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

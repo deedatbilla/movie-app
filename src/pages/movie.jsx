@@ -1,11 +1,13 @@
 import { API } from "aws-amplify";
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Movies({ match }) {
   console.log(match);
   const { id } = match.params;
   const [movie, setMovie] = useState();
   const [director, setDirector] = useState();
+  const history = useHistory();
   const fetchMovie = async () => {
     try {
       const apiName = "moviesAPi";
@@ -44,6 +46,13 @@ function Movies({ match }) {
           Director: {director?.first_name} {director?.last_name}
         </p>
       </div>
+
+      <button
+        onClick={() => history.push(`/update-movie/${id}`)}
+        className="flex text-center justify-center items-center bg-blue-600 rounded-md px-3 py-2 w-full mt-3"
+      >
+        <p className="text-center">Update movie</p>
+      </button>
     </div>
   );
 }

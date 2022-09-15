@@ -49,6 +49,20 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/update-movie": {
+      "name": "/update-movie",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/update-director": {
+      "name": "/update-director",
+      "lambdaFunction": "movieService",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }

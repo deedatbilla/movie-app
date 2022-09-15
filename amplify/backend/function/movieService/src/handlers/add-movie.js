@@ -15,7 +15,7 @@ const handler = async ({ request, response }) => {
     response.status(StatusCodes.CREATED);
     response.json({ data: { ...movie } });
   } catch (e) {
-    error(e);
+   
     response.status(StatusCodes.UNPROCESSABLE_ENTITY);
     response.json(e);
   }

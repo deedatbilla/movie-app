@@ -18,6 +18,8 @@ const { handler: addDirector } = require("./handlers/add-director");
 const { handler: getMovie } = require("./handlers/get-movie");
 const { handler: getDirector } = require("./handlers/get-director");
 const { handler: getAllDirectors } = require("./handlers/get-all-directors");
+const { handler: updateDirector } = require("./handlers/update-director");
+const { handler: updateMovie } = require("./handlers/update-movie");
 // declare a new express app
 const app = express();
 const PORT = 5000;
@@ -58,6 +60,13 @@ app.post("/add-director", function (req, res) {
   addDirector({ request: req, response: res });
 });
 
+app.put("/update-director", function (req, res) {
+  updateDirector({ request: req, response: res });
+});
+
+app.put("/update-movie", function (req, res) {
+  updateMovie({ request: req, response: res });
+});
 
 app.listen(PORT, function () {
   console.log(`App started on  port ${PORT}`);

@@ -3,14 +3,19 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useHistory } from "react-router-dom";
 
-function AddMovie() {
+function UpdateDirector() {
+  const [loading, setLoading] = useState();
   const history = useHistory();
-  const [loading, setLoading] = useState(false);
-  const [values, setValues] = useState({ name: "", year: "", directorId: "" });
   const [directors, setDirectors] = useState([]);
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    directorId: "",
+  });
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+
   const fetchAllDirectors = async () => {
     try {
       const apiName = "moviesAPi";
@@ -23,28 +28,26 @@ function AddMovie() {
   useEffect(() => {
     fetchAllDirectors();
   }, []);
-
   const onSubmit = async (e) => {
     try {
       e.preventDefault();
       setLoading(true);
       const apiName = "moviesAPi";
-      const path = `/add-movie`;
+      const path = `/update-director`;
       const payload = {
         body: {
           ...values,
-          year: Number(values.year),
-          directorId: Number(values.directorId),
+          id: Number(values.directorId),
         },
       };
       console.log(payload);
-      const response = await API.post(apiName, path, payload);
+      const response = await API.put(apiName, path, payload);
       setLoading(false);
-      toast.success("Movie successfully added");
+      toast.success("Director  successfully updated");
       history.push("/");
     } catch (error) {
       setLoading(false);
-      toast.error("error adding movie");
+      toast.error("error updating director");
       console.log(error.response.data);
     }
   };
@@ -53,20 +56,21 @@ function AddMovie() {
       <form onSubmit={onSubmit} className="flex flex-col space-y-4">
         <input
           type="text"
-          placeholder="Movie name"
-          name="name"
+          placeholder="First name"
+          name="firstName"
           required
           className=" bg-gray-200 px-4 py-2 rounded-lg my-2 "
           onChange={onChange}
         />
         <input
-          type="number"
-          name="year"
+          type="text"
+          name="lastName"
           required
-          placeholder="Year released"
+          placeholder="Last name"
           className=" bg-gray-200 px-4 py-2 rounded-lg my-2 "
           onChange={onChange}
         />
+
         <select
           name="directorId"
           required
@@ -89,4 +93,4 @@ function AddMovie() {
   );
 }
 
-export default AddMovie;
+export default UpdateDirector;

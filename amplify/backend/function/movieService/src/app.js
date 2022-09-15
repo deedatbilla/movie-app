@@ -21,7 +21,7 @@ const { handler: getAllDirectors } = require("./handlers/get-all-directors");
 const { handler: updateDirector } = require("./handlers/update-director");
 const { handler: updateMovie } = require("./handlers/update-movie");
 // declare a new express app
-const app = express();
+const app = express(); 
 const PORT = 5000;
 app.use(bodyParser.json());
 app.use(awsServerlessExpressMiddleware.eventContext());

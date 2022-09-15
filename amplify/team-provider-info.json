@@ -14,7 +14,9 @@
     "categories": {
       "function": {
         "movieService": {
-          "databaseUrl": "postgresql://postgres:Portable12@moviesdb.cireainyhfl2.eu-west-2.rds.amazonaws.com:5432/moviesdb?schema=public"
+          "databaseUrl": "postgresql://postgres:Portable12@moviesdb.cireainyhfl2.eu-west-2.rds.amazonaws.com:5432/moviesdb?schema=public",
+          "deploymentBucketName": "amplify-movieapp-dev-180146-deployment",
+          "s3Key": "amplify-builds/movieService-666f50504e4777714643-build.zip"
         }
       }
     }

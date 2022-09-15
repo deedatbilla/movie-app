@@ -19,5 +19,5 @@ Amplify.configure({
   ...awsExports,
 });
 
-c;
+
 reportWebVitals();

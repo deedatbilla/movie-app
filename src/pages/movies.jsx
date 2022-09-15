@@ -21,6 +21,11 @@ function Movies() {
 
   return (
     <div className="bg-black h-screen p-3">
+      <div className="flex items-end justify-end">
+        <button className="flex bg-blue-600 rounded-md px-3 py-2">
+          Add new movie
+        </button>
+      </div>
       <p>All Movies</p>
 
       <div className="grid grid-cols-2 gap-3">
